@@ -1,53 +1,14 @@
-import React, {Component} from 'react';
-import "../../assets/css/studyBox.css"
+import React from 'react';
+import "../../assets/css/studyBox.css";
+import StudyTags from './StudyTags';
+import StudyPerson from './StudyPerson';
+import StudyPeriod from './StudyPeriod';
 
 
 
-
-
-function StudyTags({multiTags}){
-    console.log(multiTags);
-    const singleTag = [];
-    for (const [index, value] of multiTags.entries()){
-       singleTag.push(<span className="tag" key={index}>{value}</span>)
-   }
-    return(
-        <>{singleTag}</>
-    );
-}
-function StudyPerson({persons}){
-    const currentPerson = [];
-    const maxPerson = [];
-    for (const [index, value] of persons.entries()){
-        if(index === 0){
-            currentPerson.push(<text key={index}>{value}</text>)
-        } else {
-            maxPerson.push(<text key={index}>{value}</text>)
-        }
-    }
-    return (
-        <>{currentPerson} / {maxPerson} 명 </>
-    );
-}
-function StudyPeriod({period}){
-    const startDate = [];
-    const endDate = [];
-    for (const [index, value] of period.entries()){
-        if(index === 0){
-            startDate.push(<text key={index}>{value}</text>)
-        } else {
-            endDate.push(<text key={index}>{value}</text>)
-        };
-    }
-    return (
-        <>{startDate} ~ {endDate}</>
-    );
-}
-
-function StudyContents({title, tags, person, period}){
+function StudyBox({title, tags, person, period}){
     return(
         <div className="studyBox">
-
             <div className="studyContents">
                 <table className="studyBox-table">
                     <tr>
@@ -57,7 +18,9 @@ function StudyContents({title, tags, person, period}){
                     </tr>
                     <tr>
                         <td className="studyBox-td-tag">
-                            <StudyTags multiTags={tags}/>
+                            <ul>
+                                <StudyTags multiTags={tags}/>
+                            </ul>
                         </td>
                     </tr>
                     <tr>
@@ -76,23 +39,6 @@ function StudyContents({title, tags, person, period}){
         </div>
     );
 }
-
-
-function StudyBox({studies}) { 
-    return(
-        <div>
-            {studies.map(studyInfo => (
-                <StudyContents
-                    title={studyInfo.title}
-                    tags={studyInfo.tags}
-                    person={studyInfo.person}
-                    period={studyInfo.period}/>
-            ))}
-        </div>
-    );
-
-}
-
 export default StudyBox;
 
 
@@ -109,23 +55,13 @@ export default StudyBox;
 //         }
 //         return(
 //             <div>
-//                 <div className="studyBox">
-//                     <div className="studyContents">
-//                         <table className="studyBox-table">
-//                             <tr>
-//                                 <td className="studyBox-td-title">스터디제목</td>
-//                             </tr>
-//                             <tr>
-//                                 <td className="studyBox-td-tag">{keyword}</td>
-//                             </tr>
-//                             <tr className="studyBox-tr-1">
-//                                 <td className="studyBox-td-person">10명</td>
-//                                 <td
-//                                 className="studyBox-td-period">2021-07-01 ~ 2021-07-31</td>
-//                             </tr>
-//                         </table>
-//                     </div>
-//                 </div>
+//                 {studies.map(studyInfo => (
+//                     <StudyContents
+//                         title={studyInfo.title}
+//                         tags={studyInfo.tags}
+//                         person={studyInfo.person}
+//                         period={studyInfo.period}/>
+//                 ))}
 //             </div>
 //         );
 //     }

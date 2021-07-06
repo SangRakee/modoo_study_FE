@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import StudyBox from "./StudyBox";
+import BoxArray from "./BoxArray";
 import "../../assets/css/studyList.css";
 
 
@@ -95,7 +95,7 @@ function Section({category, studies}) {
         <section className="category">
             <h4 className="category-title">{category_name}</h4>
             <div className="category-box-area">
-                <StudyBox studies={study}/>
+                <BoxArray studies={study}/>
             </div>
         </section>
     );

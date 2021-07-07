@@ -50,7 +50,7 @@ function PresentStudy(props) {
         <div>
             <h3>{selected_study.title}</h3>
             {selected_study.description}
-            <button>팀 전체 채팅</button>
+            <button onClick={()=>window.open('/chatting','_blank')}>팀 전체 채팅</button>
 
             <button onClick={openRatingModal}>팀원 평가하기</button>
             <RatingModal open={isratingModal} close={closeRatingModal}>

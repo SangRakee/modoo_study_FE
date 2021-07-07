@@ -41,6 +41,8 @@ class Menu extends Component{
                         회원가입 모달 창 입니다.
                     </SignupModal>
                     <Link to="/mypage">마이페이지</Link>
+                    <button onClick={()=>window.open('/chatting','_blank')}>채팅창</button>
+
 
                 </div>
 

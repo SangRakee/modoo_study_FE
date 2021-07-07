@@ -1,0 +1,151 @@
+{
+    "statusCode": 200,
+    "responseMessage": "회원가입 폼 로드 성공",
+    "data": {
+        "interestDto": [
+            {
+                "interestID": 1,
+                "interestName": "자격증",
+                "interestClassification": "목적"
+            },
+            {
+                "interestID": 2,
+                "interestName": "인적성",
+                "interestClassification": "목적"
+            },
+            {
+                "interestID": 3,
+                "interestName": "면접",
+                "interestClassification": "목적"
+            },
+            {
+                "interestID": 4,
+                "interestName": "공모전",
+                "interestClassification": "목적"
+            },
+            {
+                "interestID": 5,
+                "interestName": "자기개발",
+                "interestClassification": "목적"
+            },
+            {
+                "interestID": 6,
+                "interestName": "시험",
+                "interestClassification": "목적"
+            },
+            {
+                "interestID": 7,
+                "interestName": "NCS",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 8,
+                "interestName": "TOEIC",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 9,
+                "interestName": "OPIC",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 10,
+                "interestName": "컴활",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 11,
+                "interestName": "경제/금융",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 12,
+                "interestName": "IT/컴퓨터",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 13,
+                "interestName": "어학",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 14,
+                "interestName": "법률",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 15,
+                "interestName": "예체능",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 16,
+                "interestName": "건설/토목",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 17,
+                "interestName": "산업/환경",
+                "interestClassification": "분야"
+            },
+            {
+                "interestID": 18,
+                "interestName": "보건/복지",
+                "interestClassification": "분야"
+            }
+        ],
+        "regionDto": [
+            {
+                "regionName": "강원도"
+            },
+            {
+                "regionName": "경기도"
+            },
+            {
+                "regionName": "경상남도"
+            },
+            {
+                "regionName": "경상북도"
+            },
+            {
+                "regionName": "광주광역시"
+            },
+            {
+                "regionName": "대구광역시"
+            },
+            {
+                "regionName": "대전광역시"
+            },
+            {
+                "regionName": "부산광역시"
+            },
+            {
+                "regionName": "서울특별시"
+            },
+            {
+                "regionName": "세종특별자치시"
+            },
+            {
+                "regionName": "울산광역시"
+            },
+            {
+                "regionName": "인천광역시"
+            },
+            {
+                "regionName": "전라남도"
+            },
+            {
+                "regionName": "전라북도"
+            },
+            {
+                "regionName": "제주특별자치도"
+            },
+            {
+                "regionName": "충청남도"
+            },
+            {
+                "regionName": "충청북도"
+            }
+        ]
+    }
+}

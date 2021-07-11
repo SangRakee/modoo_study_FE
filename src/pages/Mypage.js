@@ -1,48 +1,83 @@
 import React from 'react';
+import '../assets/css/myPage.css';
+// import "./user.json";
+
 
 const Mypage = () => {
     return (
         <div>
-            <h2>User Profile</h2>
-            <div>
-                <div name="Account Information">
-                    <h5>Username</h5>
-                        <input type="text" value="{username}"/>         
-                    <h5>picture</h5>
-                        <input type="file" onChange="{setFile.bind(this)}"/>
-                        <input type="button" onClick="{postFile}" value="upload"/>
-                    <h5>email</h5>
-                        <input type="text" value="{email}" readonly/>
-                    <h5>region</h5>
-                        <div class="dropdown" name="region">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
+            <main>
+                <h2>User Profile</h2>
+                <div className="userProfile">
+                    <div className="accountInfo">
+                        <div className="section-left">
+                            <h5>picture</h5>
+                            <div className="picture-area">
+                                <span className="profile-picture"><img/></span>
+                                <label className="input-file-btn" for="input-file">추가/변경</label>
+                                <input type="file" id="input-file" style={{display:"none"}}/>
+                                {/* <input type="file" onChange="{setFile.bind(this)}"/>
+                                <input type="button" onClick="{postFile}" value="upload"/>                                         */}
+                            </div>
+                            
+                        </div>        
+                        <div className="section-right">
+                            <div className="section-userinfo">
+                                <h5>Username</h5>
+                                <input type="text" placeholder="username"/> 
+
+                                <h5>Email</h5>
+                                <input type="text" placeholder="email" readonly/>
+
+                                <h5>My ratings</h5>
+                                <span>5.0점</span>
+                                {/* <button>코멘트 보기</button> 스텝업 개발*/}
+                            </div>
+                            <div className="section-emblems">
+                                <div className="emblem">
+                                    <h5>My Emblem</h5>
+                                    <div className="list-emblem-img">
+                                        {/* {myEmblems.map(emblem => {
+                                            <img id={emblem}/>
+                                        })} */}
+                                        <img/>
+                                        <img/>
+                                        <img/>
+                                    </div>
+                                    <a href="/EmblemModal"><button className="emblem-btn">관리하기</button></a>
+                                </div>
+
+                            </div>
+                            <div className="section-region">
+                                <div className="region">
+                                    <h5>region</h5>
+                                    <div class="dropdown" name="region">
+                                        <ul>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="section-certificate">
+                                <div className="certificate">
+                                    <h5>Certificates</h5>
+                                        <a href="CertificateModal"><button className="certificate-btn">등록하기</button></a>
+                                    <div class="dropdown" name="certificate">
+                                        <ul>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                </div>
-                <div name="Emblem">
-                    <h5>My Emblem</h5>
-                    <a href="/EmblemModal"><input type="button" value="Manage"/></a>
-                    <div>
-                        <img></img>
-                        <img></img>
-                        <img></img>
+                        
                     </div>
                 </div>
-                <div name="Certificate">
-                    <h5>Certificates</h5>
-                    <a href="CertificateModal"><input type="button" value="Register"/></a>
-                    <div class="dropdown" name="certificate">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </main>
         </div>
     );
 };

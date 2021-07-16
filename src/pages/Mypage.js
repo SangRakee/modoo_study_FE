@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../assets/css/myPage.css';
 // import "./user.json";
 
 
-const Mypage = () => {
+function Mypage(props){
+    const email=JSON.parse(localStorage.getItem("user"))[0]
+
     return (
         <div>
             <main>
@@ -24,10 +26,10 @@ const Mypage = () => {
                         <div className="section-right">
                             <div className="section-userinfo">
                                 <h5>Username</h5>
-                                <input type="text" placeholder="username"/> 
+                                <input type="text" placeholder="username" readOnly/>
 
                                 <h5>Email</h5>
-                                <input type="text" placeholder="email" readonly/>
+                                <p type="text">{email}</p>
 
                                 <h5>My ratings</h5>
                                 <span>5.0점</span>

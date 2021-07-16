@@ -89,8 +89,8 @@ const myInterests = ["interview", "coding", "certificate"]
 function Section({category, studies}) {
     const category_name = category;
     const study = studies.filter(item => item.category === category_name); // filter studies by myInterests
-    console.log(study)
-    console.log(category);
+
+    
     return(
         <section className="category">
             <h4 className="category-title">{category_name}</h4>
